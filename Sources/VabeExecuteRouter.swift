@@ -15,15 +15,14 @@ public class VabeExecuteRouter: VabeRouter
     public let endpoint: String
     public let routes: Routes
     
-    // TODO: Replace string controller by a real one
-    public init(endpoint: String, method: HTTPMethod, controller: String)
+    public init(endpoint: String, method: HTTPMethod, controller: VabeExecuteController)
     {
         self.endpoint = endpoint
         self.method = method
         
         var routes = Routes()
         
-        routes.add(method: self.method, uri: "/\(self.endpoint)", handler: { _, _ in })
+        routes.add(method: self.method, uri: "/\(self.endpoint)", handler: controller.handle)
         
         self.routes = routes
     }

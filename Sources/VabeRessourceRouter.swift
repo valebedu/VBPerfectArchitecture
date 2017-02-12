@@ -15,8 +15,7 @@ public class VabeRessourceRouter: VabeRouter
     public let endpoint: String
     public let routes: Routes
     
-    // TODO: Replace string controller by a real one
-    public init(endpoint: String, id: String, controller: String, parent: VabeRessourceRouter? = nil)
+    public init(endpoint: String, id: String, controller: VabeRessourceController, parent: VabeRessourceRouter? = nil)
     {
         self.id = id
         
@@ -31,11 +30,11 @@ public class VabeRessourceRouter: VabeRouter
         
         var routes = Routes()
         
-        routes.add(method: .get, uri: "/\(self.endpoint)", handler: { _, _ in })
-        routes.add(method: .get, uri: "/\(self.endpoint)/{\(self.id)}", handler: { _, _ in })
-        routes.add(method: .post, uri: "/\(self.endpoint)", handler: { _, _ in })
-        routes.add(method: .put, uri: "/\(self.endpoint)/{\(self.id)}", handler: { _, _ in })
-        routes.add(method: .delete, uri: "/\(self.endpoint)/{\(self.id)}", handler: { _, _ in })
+        routes.add(method: .get, uri: "/\(self.endpoint)", handler: controller.handleList)
+        routes.add(method: .get, uri: "/\(self.endpoint)/{\(self.id)}", handler: controller.handleRetrieve)
+        routes.add(method: .post, uri: "/\(self.endpoint)", handler: controller.handleCreate)
+        routes.add(method: .put, uri: "/\(self.endpoint)/{\(self.id)}", handler: controller.handleUpdate)
+        routes.add(method: .delete, uri: "/\(self.endpoint)/{\(self.id)}", handler: controller.handleDelete)
         
         self.routes = routes
     }
