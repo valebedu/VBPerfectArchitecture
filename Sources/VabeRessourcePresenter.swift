@@ -11,8 +11,8 @@ import PerfectHTTP
 public protocol VabeRessourcePresenter: VabePresenter
 {
     func presentList(identifiers: [String]?, response: HTTPResponse)
-    func presentRetrieve(identifiers: [String]?, response: HTTPResponse)
+    func presentRetrieve(identifiers: [String], response: HTTPResponse)
     func presentCreate(identifiers: [String]?, ressource: [Any]?, response: HTTPResponse)
-    func presentUpdate(identifiers: [String]?, ressource: [Any]?, response: HTTPResponse)
-    func presentDelete(identifiers: [String]?, response: HTTPResponse)
+    func presentUpdate(identifiers: [String], ressource: [Any]?, response: HTTPResponse)
+    func presentDelete(identifiers: [String], response: HTTPResponse)
 }
