@@ -10,5 +10,5 @@ import XCTest
 @testable import VabeArchitectureTests
 
 XCTMain([
-     testCase(VabeArchitectureTests.allTests),
+     testCase(VabeArchitectureTests.allTests)
 ])

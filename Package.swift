@@ -10,7 +10,12 @@ import PackageDescription
 
 let package = Package(
     name: "VabeArchitecture",
-    targets: [],
+    targets: [
+        Target(
+            name: "VabeArchitecture",
+            dependencies: []
+        )
+    ],
     dependencies: [
         .Package(
             url: "https://github.com/PerfectlySoft/Perfect-HTTPServer.git",
