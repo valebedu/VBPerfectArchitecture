@@ -10,5 +10,5 @@ import PerfectHTTP
 
 public protocol VabeExecuteInteractor: VabeInteractor
 {
-    func fetch(identifiers: [String]?, ressource: [Any]?, response: HTTPResponse)
+    func fetch(identifiers: [String: Any]?, ressources: [Any]?, response: HTTPResponse)
 }

@@ -10,9 +10,9 @@ import PerfectHTTP
 
 public protocol VabeRessourceInteractor: VabeInteractor
 {
-    func fetchList(identifiers: [String]?, response: HTTPResponse)
-    func fetchRetrieve(identifiers: [String], response: HTTPResponse)
-    func fetchCreate(identifiers: [String]?, ressource: [Any]?, response: HTTPResponse)
-    func fetchUpdate(identifiers: [String], ressource: [Any]?, response: HTTPResponse)
-    func fetchDelete(identifiers: [String], response: HTTPResponse)
+    func fetchList(identifiers: [String: Any]?, response: HTTPResponse)
+    func fetchRetrieve(identifiers: [String: Any]?, response: HTTPResponse)
+    func fetchCreate(identifiers: [String: Any]?, ressource: Any?, response: HTTPResponse)
+    func fetchUpdate(identifiers: [String: Any]?, ressource: Any?, response: HTTPResponse)
+    func fetchDelete(identifiers: [String: Any]?, response: HTTPResponse)
 }
