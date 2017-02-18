@@ -9,4 +9,6 @@
 public protocol VabeController: class
 {
     var output: VabeInteractor! { get set }
+    
+    init()
 }
