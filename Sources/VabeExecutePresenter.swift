@@ -10,5 +10,5 @@ import PerfectHTTP
 
 public protocol VabeExecutePresenter: VabePresenter
 {
-    func present(identifiers: [String]?, ressource: [Any]?, response: HTTPResponse)
+    func present(ressources: [Any]?, response: HTTPResponse)
 }
