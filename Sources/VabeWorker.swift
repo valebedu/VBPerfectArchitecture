@@ -15,7 +15,7 @@ public protocol VabeWorker: VabeStore
 
 public extension VabeWorker
 {
-    public func count(identifiers: [String]?) throws -> Int
+    public func count(identifiers: [String]?) throws -> UInt64
     {
         do
         {

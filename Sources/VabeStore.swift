@@ -8,7 +8,7 @@
 
 public protocol VabeStore
 {
-    func count(identifiers: [String]?) throws -> Int
+    func count(identifiers: [String]?) throws -> UInt64
     func list(identifers: [String]?, options: [VabeStoreOption]) throws -> [Any]?
     func retrieve(identifiers: [String]) throws -> Any?
     func create(identifers: [String]?, ressource: Any) throws -> Void
