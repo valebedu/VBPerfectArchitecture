@@ -6,16 +6,30 @@
 //
 //
 
+/**
+ Defines a `VabeWorker` requirements. This protocol allow to interface many `VabeStoreDatabase` children.
+ 
+ The extended class should be the used in an interactor in order to complete VabeArchitecture workflow.
+ 
+ - authors: Valentin Bercot
+ */
 public protocol VabeWorker: VabeStore
 {
+    /**
+     Store consumed.
+     */
     var store: VabeStoreDatabase { get }
     
+    /**
+     - parameters:
+       - store: the database store to consume.
+     */
     init(store: VabeStoreDatabase)
 }
 
 public extension VabeWorker
 {
-    public func count(identifiers: [String]?) throws -> Int
+    public func count(identifiers: [String]?) throws -> UInt64
     {
         do
         {

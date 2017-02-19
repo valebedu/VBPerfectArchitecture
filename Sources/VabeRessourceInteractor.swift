@@ -8,11 +8,59 @@
 
 import PerfectHTTP
 
+/**
+ Defines a `VabeRessourceInteractor` requirements. Extend it to create an interactor which fetch data for ressource handled routes.
+ 
+ If you want to manage an executable route see `VabeExecuteInteractor`.
+ 
+ - authors: Valentin Bercot
+ */
 public protocol VabeRessourceInteractor: VabeInteractor
 {
-    func fetchList(identifiers: [String]?, response: HTTPResponse)
-    func fetchRetrieve(identifiers: [String], response: HTTPResponse)
-    func fetchCreate(identifiers: [String]?, ressource: [Any]?, response: HTTPResponse)
-    func fetchUpdate(identifiers: [String], ressource: [Any]?, response: HTTPResponse)
-    func fetchDelete(identifiers: [String], response: HTTPResponse)
+    /**
+     Fetch data in order to complete handled list request.
+     
+     - parameters:
+       - identifiers: route identifiers handled from client request.
+       - response: the HTTP response.
+     */
+    func fetchList(identifiers: [String: Any]?, response: HTTPResponse)
+    
+    /**
+     Fetch data in order to complete handled retrieve request.
+     
+     - parameters:
+       - identifiers: route identifiers handled from client request.
+       - response: the HTTP response.
+     */
+    func fetchRetrieve(identifiers: [String: Any]?, response: HTTPResponse)
+    
+    /**
+     Fetch data in order to complete handled create request.
+     
+     - parameters:
+       - identifiers: route identifiers handled from client request.
+       - ressource: ressource handled from client request.
+       - response: the HTTP response.
+     */
+    func fetchCreate(identifiers: [String: Any]?, ressource: Any?, response: HTTPResponse)
+    
+    /**
+     Fetch data in order to complete handled update request.
+     
+     - parameters:
+       - identifiers: route identifiers handled from client request.
+       - ressource: ressource handled from client request.
+       - response: the HTTP response.
+     */
+    func fetchUpdate(identifiers: [String: Any]?, ressource: Any?, response: HTTPResponse)
+    
+    /**
+     Fetch data in order to complete handled delete request.
+     
+     - parameters:
+       - identifiers: route identifiers handled from client request.
+       - response: the HTTP response.
+     */
+    func fetchDelete(identifiers: [String: Any]?, response: HTTPResponse)
 }

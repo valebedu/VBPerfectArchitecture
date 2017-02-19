@@ -8,7 +8,21 @@
 
 import PerfectHTTP
 
+/**
+ Defines a `VabeExecutePresenter` requirements. Extend it to create a presenter which present data for an executable fetched route.
+ 
+ If you want to manage ressource routes see `VabeRessourcePresenter`.
+ 
+ - authors: Valentin Bercot
+ */
 public protocol VabeExecutePresenter: VabePresenter
 {
-    func present(identifiers: [String]?, ressource: [Any]?, response: HTTPResponse)
+    /**
+     Present data in order to complete fetched request.
+     
+     - parameters:
+       - ressources: ressources fetched from database.
+       - response: the HTTP response.
+     */
+    func present(ressources: [Any]?, response: HTTPResponse)
 }

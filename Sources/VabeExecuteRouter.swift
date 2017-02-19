@@ -8,17 +8,42 @@
 
 import PerfectHTTP
 
+/**
+ An implementation of `VabeRouter`. This router should be use to manage an executable route (not ressource routes).
+ 
+ If you want to manage ressource routes see `VabeRessourceRouter`.
+ 
+ - authors: Valentin Bercot
+ */
 public class VabeExecuteRouter: VabeRouter
 {
+    /**
+     The `routes` method.
+     */
     private let method: HTTPMethod
     
     public let endpoint: String
     public let routes: Routes
     
-    public init(endpoint: String, method: HTTPMethod, controller: VabeExecuteController)
+    /**
+     - parameters:
+       - endpoint: the generated route endpoint.
+       - method: the generated route method.
+       - controller: the controller which will handle http request to this route.
+       - parent: the routes parent.
+     */
+    public init(endpoint: String, method: HTTPMethod, controller: VabeExecuteController, parent: VabeRessourceRouter? = nil)
     {
-        self.endpoint = endpoint
         self.method = method
+        
+        if parent != nil
+        {
+            self.endpoint = "\(parent!.endpoint)/{\(parent!.id)}/\(endpoint)"
+        }
+        else
+        {
+            self.endpoint = endpoint
+        }
         
         var routes = Routes()
         
