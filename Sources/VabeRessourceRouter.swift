@@ -8,13 +8,30 @@
 
 import PerfectHTTP
 
+/**
+ An implement of `VabeRouter`. This router should be use to manage ressource routes (not an action route).
+ 
+ If you want to manage action route see `VabeExecuteRouter`
+ 
+ - authors: Valentin Bercot
+ */
 public class VabeRessourceRouter: VabeRouter
 {
-    private let id: String
+    /**
+     The `routes` id. This id is used in some routes and also for children routers.
+     */
+    internal let id: String
     
     public let endpoint: String
     public let routes: Routes
     
+    /**
+     - parameters:
+       - endpoint: the generated routes endpoint.
+       - id: the generated routes id.
+       - controller: the controller which will handle http request to theses routes.
+       - parent: the routes parent.
+     */
     public init(endpoint: String, id: String, controller: VabeRessourceController, parent: VabeRessourceRouter? = nil)
     {
         self.id = id
