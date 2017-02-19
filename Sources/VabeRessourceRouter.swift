@@ -9,7 +9,7 @@
 import PerfectHTTP
 
 /**
- An implement of `VabeRouter`. This router should be use to manage ressource routes (not an action route).
+ An implementation of `VabeRouter`. This router should be use to manage ressource routes (not an action route).
  
  If you want to manage action route see `VabeExecuteRouter`
  
