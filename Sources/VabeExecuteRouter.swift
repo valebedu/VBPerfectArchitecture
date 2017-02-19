@@ -16,9 +16,19 @@ public class VabeExecuteRouter: VabeRouter
     public let routes: Routes
     
     public init(endpoint: String, method: HTTPMethod, controller: VabeExecuteController)
+    public init(endpoint: String, method: HTTPMethod, controller: VabeExecuteController, parent: VabeRessourceRouter? = nil)
     {
         self.endpoint = endpoint
         self.method = method
+        
+        if parent != nil
+        {
+            self.endpoint = "\(parent!.endpoint)/{\(parent!.id)}/\(endpoint)"
+        }
+        else
+        {
+            self.endpoint = endpoint
+        }
         
         var routes = Routes()
         
