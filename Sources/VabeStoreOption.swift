@@ -6,6 +6,11 @@
 //
 //
 
+/**
+ Enum used to represent list request options.
+ 
+ - authors: Valentin Bercot
+ */
 public enum VabeStoreOption
 {
     case order(by: String, ascending: Bool)

@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ `Error` enum used to represent error cases throw by `VabeStore` extended classes.
+ 
+ - authors: Valentin Bercot
+ */
 public enum VabeStoreError: Error
 {
     case alreadyExist(id: String)
