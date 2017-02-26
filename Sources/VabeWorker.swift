@@ -41,11 +41,11 @@ public extension VabeWorker
         }
     }
     
-    public func list(identifers: [String]?, options: [VabeStoreOption]) throws -> [Any]?
+    public func list(identifiers: [String]?, options: [VabeStoreOption]) throws -> [Any]?
     {
         do
         {
-            return try store.list(identifers: identifers, options: options)
+            return try store.list(identifiers: identifiers, options: options)
         }
         catch
         {

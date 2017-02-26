@@ -36,7 +36,7 @@ public protocol VabeStore
      
      - returns: a list of ressources.
      */
-    func list(identifers: [String]?, options: [VabeStoreOption]) throws -> [Any]?
+    func list(identifiers: [String]?, options: [VabeStoreOption]) throws -> [Any]?
     
     /**
      Retrieve a specific ressource.
