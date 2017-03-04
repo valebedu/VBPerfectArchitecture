@@ -22,9 +22,10 @@ public protocol VabeRessourceInteractor: VabeInteractor
      
      - parameters:
        - identifiers: route identifiers handled from client request.
+       - options: data options use to retrieve specifics data.
        - response: the HTTP response.
      */
-    func fetchList(identifiers: [String: Any]?, response: HTTPResponse)
+    func fetchList(identifiers: [String: Any]?, options: VabeStoreOptions, response: HTTPResponse)
     
     /**
      Fetch data in order to complete handled retrieve request.

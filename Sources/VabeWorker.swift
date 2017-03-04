@@ -41,7 +41,7 @@ public extension VabeWorker
         }
     }
     
-    public func list(identifiers: [String]?, options: [VabeStoreOption]) throws -> [Any]?
+    public func list(identifiers: [String]?, options: VabeStoreOptions) throws -> [Any]?
     {
         do
         {
