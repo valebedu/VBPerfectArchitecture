@@ -1,6 +1,6 @@
 //
-//  VabeRessourcePresenter.swift
-//  VabeArchitecture
+//  VBPerfectRessourcePresenter.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 12/02/2017.
 //
@@ -9,13 +9,13 @@
 import PerfectHTTP
 
 /**
- Defines a `VabeRessourcePresenter` requirements. Extend it to create a presenter which present data for ressource fetched routes.
+ Defines a `VBPerfectRessourcePresenter` requirements. Extend it to create a presenter which present data for ressource fetched routes.
  
- If you want to manage an executable route see `VabeExecutePresenter`.
+ If you want to manage an executable route see `VBPerfectExecutePresenter`.
  
  - authors: Valentin Bercot
  */
-public protocol VabeRessourcePresenter: VabePresenter
+public protocol VBPerfectRessourcePresenter: VBPerfectPresenter
 {
     /**
      Present data in order to complete fetched list request.

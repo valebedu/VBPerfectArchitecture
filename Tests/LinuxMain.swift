@@ -1,14 +1,14 @@
 //
 //  LinuxMain.swift
-//  VabeArchitecture
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 11/02/2017.
 //
 //
 
 import XCTest
-@testable import VabeArchitectureTests
+@testable import VBPerfectArchitectureTests
 
 XCTMain([
-     testCase(VabeArchitectureTests.allTests)
+     testCase(VBPerfectArchitectureTests.allTests)
 ])

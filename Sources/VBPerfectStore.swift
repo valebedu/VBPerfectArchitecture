@@ -1,17 +1,17 @@
 //
-//  VabeStore.swift
-//  VabeArchitecture
+//  VBPerfectStore.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 13/02/2017.
 //
 //
 
 /**
- Defines a `VabeStore` requirements. Theses requirements consist in CRUD methods.
+ Defines a `VBPerfectStore` requirements. Theses requirements consist in CRUD methods.
  
  - authors: Valentin Bercot
  */
-public protocol VabeStore
+public protocol VBPerfectStore
 {
     /**
      Count total amount of ressources.
@@ -36,7 +36,7 @@ public protocol VabeStore
      
      - returns: a list of ressources.
      */
-    func list(identifiers: [String]?, options: VabeStoreOptions) throws -> [Any]?
+    func list(identifiers: [String]?, options: VBPerfectStoreOptions) throws -> [Any]?
     
     /**
      Retrieve a specific ressource.

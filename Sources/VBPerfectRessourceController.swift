@@ -1,6 +1,6 @@
 //
-//  VabeRessourceController.swift
-//  VabeArchitecture
+//  VBPerfectRessourceController.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 12/02/2017.
 //
@@ -9,16 +9,16 @@
 import PerfectHTTP
 
 /**
- Defines a `VabeRessourceController` requirements. Extend it to create a controller which handle ressource routes.
+ Defines a `VBPerfectRessourceController` requirements. Extend it to create a controller which handle ressource routes.
  
- If you want to manage an executable route see `VabeExecuteController`.
+ If you want to manage an executable route see `VBPerfectExecuteController`.
  
  - authors: Valentin Bercot
  */
-public protocol VabeRessourceController: VabeController
+public protocol VBPerfectRessourceController: VBPerfectController
 {
     /**
-     Handle list request from `VabeRessourceRouter`.
+     Handle list request from `VBPerfectRessourceRouter`.
      
      - parameters:
        - request: the HTTP request.
@@ -27,7 +27,7 @@ public protocol VabeRessourceController: VabeController
     func handleList(request: HTTPRequest, response: HTTPResponse)
     
     /**
-     Handle retrieve request from `VabeRessourceRouter`.
+     Handle retrieve request from `VBPerfectRessourceRouter`.
      
      - parameters:
        - request: the HTTP request.
@@ -36,7 +36,7 @@ public protocol VabeRessourceController: VabeController
     func handleRetrieve(request: HTTPRequest, response: HTTPResponse)
     
     /**
-     Handle create request from `VabeRessourceRouter`.
+     Handle create request from `VBPerfectRessourceRouter`.
      
      - parameters:
        - request: the HTTP request.
@@ -45,7 +45,7 @@ public protocol VabeRessourceController: VabeController
     func handleCreate(request: HTTPRequest, response: HTTPResponse)
     
     /**
-     Handle update request from `VabeRessourceRouter`.
+     Handle update request from `VBPerfectRessourceRouter`.
      
      - parameters:
        - request: the HTTP request.
@@ -54,7 +54,7 @@ public protocol VabeRessourceController: VabeController
     func handleUpdate(request: HTTPRequest, response: HTTPResponse)
     
     /**
-     Handle delete request from `VabeRessourceRouter`.
+     Handle delete request from `VBPerfectRessourceRouter`.
      
      - parameters:
        - request: the HTTP request.
@@ -63,7 +63,7 @@ public protocol VabeRessourceController: VabeController
     func handleDelete(request: HTTPRequest, response: HTTPResponse)
 }
 
-public extension VabeRessourceController
+public extension VBPerfectRessourceController
 {
     /**
      Display list response to client and complete the controller interactor presenter cycle.

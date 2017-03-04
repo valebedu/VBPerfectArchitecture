@@ -1,6 +1,6 @@
 //
-//  VabeStoreOptions.swift
-//  VabeArchitecture
+//  VBPerfectStoreOptions.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 13/02/2017.
 //
@@ -14,7 +14,7 @@ import PerfectHTTP
  
  - authors: Valentin Bercot
  */
-public struct VabeStoreOptions
+public struct VBPerfectStoreOptions
 {
     /**
      Order, composed of the variable to order by and the ascending order.
@@ -37,7 +37,7 @@ public struct VabeStoreOptions
        - limit: the limit.
        - page: the page.
      
-     - throws: a `VabeStoreError` in case of bad format or limit reached.
+     - throws: a `VBPerfectStoreError` in case of bad format or limit reached.
      */
     public init(order: String?, limit: String?, page: String?) throws
     {
@@ -76,12 +76,12 @@ public struct VabeStoreOptions
                 }
                 else
                 {
-                    throw VabeStoreError.limitReached(limit: limit)
+                    throw VBPerfectStoreError.limitReached(limit: limit)
                 }
             }
             else
             {
-                throw VabeStoreError.badFormat(parameter: "limit")
+                throw VBPerfectStoreError.badFormat(parameter: "limit")
             }
         }
         else
@@ -97,7 +97,7 @@ public struct VabeStoreOptions
             }
             else
             {
-                throw VabeStoreError.badFormat(parameter: "page")
+                throw VBPerfectStoreError.badFormat(parameter: "page")
             }
         }
         else
@@ -110,7 +110,7 @@ public struct VabeStoreOptions
      - parameters:
        - request: the HTTP request in which order, limit and page are.
      
-     - throws: a `VabeStoreError` in case of bad format or limit reached.
+     - throws: a `VBPerfectStoreError` in case of bad format or limit reached.
      */
     public init(request: HTTPRequest) throws
     {
