@@ -15,7 +15,10 @@ import Foundation
  */
 public enum VabeStoreError: Error
 {
-    case alreadyExist(id: String)
-    case notFound(id: String)
-    case notSingle(id: String)
+    case alreadyExist(identifier: String)
+    case badFormat(parameter: String)
+    case identifiersNotEmpty(identifiers: [String])
+    case limitReached(limit: UInt8)
+    case notFound(identifier: String)
+    case notSingle(identifier: String)
 }
