@@ -9,6 +9,8 @@
 /**
  Defines a `VabeConfigurator` requirements. The configurator goal is to create controller interactor presenter cycle in order to complete VabeArchitecture.
  
+ - attention: This class should implement Singleton design pattern.
+ 
  - authors: Valentin Bercot
  */
 public protocol VabeConfigurator
@@ -20,14 +22,4 @@ public protocol VabeConfigurator
        - controller: the controller in which the cycle start.
      */
     func configure(controller: VabeController)
-}
-
-public extension VabeConfigurator
-{
-    /**
-     Configurator shared instance.
-     */
-    static var sharedInstance: Self {
-        return self as! Self
-    }
 }
