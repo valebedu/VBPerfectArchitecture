@@ -1,6 +1,6 @@
 //
-//  VabeRouter.swift
-//  VabeArchitecture
+//  VBPerfectRouter.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 12/02/2017.
 //
@@ -13,7 +13,7 @@ import PerfectHTTP
  
  - authors: Valentin Bercot
  */
-public protocol VabeRouter
+public protocol VBPerfectRouter
 {
     /**
      Represent the `routes` basic endpoint (without `id`)
@@ -21,7 +21,7 @@ public protocol VabeRouter
     var endpoint: String { get }
     
     /**
-     Theses routes should be added to the `PerfectHTTPServer` routes in order to complete VabeArchitecture workflow.
+     Theses routes should be added to the `PerfectHTTPServer` routes in order to complete VBPerfectArchitecture workflow.
      */
     var routes: Routes { get }
 }

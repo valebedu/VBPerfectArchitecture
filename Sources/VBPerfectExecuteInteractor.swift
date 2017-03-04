@@ -1,6 +1,6 @@
 //
-//  VabeExecuteInteractor.swift
-//  VabeArchitecture
+//  VBPerfectExecuteInteractor.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 12/02/2017.
 //
@@ -9,13 +9,13 @@
 import PerfectHTTP
 
 /**
- Defines a `VabeExecuteInteractor` requirements. Extend it to create an interactor which fetch data for an executable handled route.
+ Defines a `VBPerfectExecuteInteractor` requirements. Extend it to create an interactor which fetch data for an executable handled route.
  
- If you want to manage ressource routes see `VabeRessourceInteractor`.
+ If you want to manage ressource routes see `VBPerfectRessourceInteractor`.
  
  - authors: Valentin Bercot
  */
-public protocol VabeExecuteInteractor: VabeInteractor
+public protocol VBPerfectExecuteInteractor: VBPerfectInteractor
 {
     /**
      Fetch data in order to complete handled request.

@@ -1,6 +1,6 @@
 //
-//  VabeExecuteRouter.swift
-//  VabeArchitecture
+//  VBPerfectExecuteRouter.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 12/02/2017.
 //
@@ -9,13 +9,13 @@
 import PerfectHTTP
 
 /**
- An implementation of `VabeRouter`. This router should be use to manage an executable route (not ressource routes).
+ An implementation of `VBPerfectRouter`. This router should be use to manage an executable route (not ressource routes).
  
- If you want to manage ressource routes see `VabeRessourceRouter`.
+ If you want to manage ressource routes see `VBPerfectRessourceRouter`.
  
  - authors: Valentin Bercot
  */
-public class VabeExecuteRouter: VabeRouter
+public class VBPerfectExecuteRouter: VBPerfectRouter
 {
     /**
      The `routes` method.
@@ -32,7 +32,7 @@ public class VabeExecuteRouter: VabeRouter
        - controller: the controller which will handle http request to this route.
        - parent: the routes parent.
      */
-    public init(endpoint: String, method: HTTPMethod, controller: VabeExecuteController, parent: VabeRessourceRouter? = nil)
+    public init(endpoint: String, method: HTTPMethod, controller: VBPerfectExecuteController, parent: VBPerfectRessourceRouter? = nil)
     {
         self.method = method
         

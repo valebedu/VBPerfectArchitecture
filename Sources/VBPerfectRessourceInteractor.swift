@@ -1,6 +1,6 @@
 //
-//  VabeRessourceInteractor.swift
-//  VabeArchitecture
+//  VBPerfectRessourceInteractor.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 12/02/2017.
 //
@@ -9,13 +9,13 @@
 import PerfectHTTP
 
 /**
- Defines a `VabeRessourceInteractor` requirements. Extend it to create an interactor which fetch data for ressource handled routes.
+ Defines a `VBPerfectRessourceInteractor` requirements. Extend it to create an interactor which fetch data for ressource handled routes.
  
- If you want to manage an executable route see `VabeExecuteInteractor`.
+ If you want to manage an executable route see `VBPerfectExecuteInteractor`.
  
  - authors: Valentin Bercot
  */
-public protocol VabeRessourceInteractor: VabeInteractor
+public protocol VBPerfectRessourceInteractor: VBPerfectInteractor
 {
     /**
      Fetch data in order to complete handled list request.
@@ -25,7 +25,7 @@ public protocol VabeRessourceInteractor: VabeInteractor
        - options: data options use to retrieve specifics data.
        - response: the HTTP response.
      */
-    func fetchList(identifiers: [String: Any]?, options: VabeStoreOptions, response: HTTPResponse)
+    func fetchList(identifiers: [String: Any]?, options: VBPerfectStoreOptions, response: HTTPResponse)
     
     /**
      Fetch data in order to complete handled retrieve request.

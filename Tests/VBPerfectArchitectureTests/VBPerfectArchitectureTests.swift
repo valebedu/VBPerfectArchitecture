@@ -1,15 +1,15 @@
 //
-//  VabeArchitectureTests.swift
-//  VabeArchitecture
+//  VBPerfectArchitectureTests.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 11/02/2017.
 //
 //
 
 import XCTest
-@testable import VabeArchitecture
+@testable import VBPerfectArchitecture
 
-class VabeArchitectureTests: XCTestCase
+class VBPerfectArchitectureTests: XCTestCase
 {
     func testExample()
     {
@@ -20,7 +20,7 @@ class VabeArchitectureTests: XCTestCase
         XCTAssertEqual(text, "Hello, World!")
     }
     
-    static var allTests : [(String, (VabeArchitectureTests) -> () throws -> Void)]
+    static var allTests : [(String, (VBPerfectArchitectureTests) -> () throws -> Void)]
     {
         return [
             ("testExample", testExample)

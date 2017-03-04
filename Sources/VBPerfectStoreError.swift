@@ -1,6 +1,6 @@
 //
-//  VabeStoreError.swift
-//  VabeArchitecture
+//  VBPerfectStoreError.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 13/02/2017.
 //
@@ -9,11 +9,11 @@
 import Foundation
 
 /**
- `Error` enum used to represent error cases throw by `VabeStore` extended classes.
+ `Error` enum used to represent error cases throw by `VBPerfectStore` extended classes.
  
  - authors: Valentin Bercot
  */
-public enum VabeStoreError: Error
+public enum VBPerfectStoreError: Error
 {
     case alreadyExist(identifier: String)
     case badFormat(parameter: String)

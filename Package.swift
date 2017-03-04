@@ -1,6 +1,6 @@
 //
 //  Package.swift
-//  VabeArchitecture
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 11/02/2017.
 //
@@ -9,10 +9,10 @@
 import PackageDescription
 
 let package = Package(
-    name: "VabeArchitecture",
+    name: "VBPerfectArchitecture",
     targets: [
         Target(
-            name: "VabeArchitecture",
+            name: "VBPerfectArchitecture",
             dependencies: []
         )
     ],

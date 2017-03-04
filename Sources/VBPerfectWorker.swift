@@ -1,33 +1,33 @@
 //
-//  VabeWorker.swift
-//  VabeArchitecture
+//  VBPerfectWorker.swift
+//  VBPerfectArchitecture
 //
 //  Created by Valentin Bercot on 13/02/2017.
 //
 //
 
 /**
- Defines a `VabeWorker` requirements. This protocol allow to interface many `VabeStoreDatabase` children.
+ Defines a `VBPerfectWorker` requirements. This protocol allow to interface many `VBPerfectStoreDatabase` children.
  
- The extended class should be the used in an interactor in order to complete VabeArchitecture workflow.
+ The extended class should be the used in an interactor in order to complete VBPerfectArchitecture workflow.
  
  - authors: Valentin Bercot
  */
-public protocol VabeWorker: VabeStore
+public protocol VBPerfectWorker: VBPerfectStore
 {
     /**
      Store consumed.
      */
-    var store: VabeStoreDatabase { get }
+    var store: VBPerfectStoreDatabase { get }
     
     /**
      - parameters:
        - store: the database store to consume.
      */
-    init(store: VabeStoreDatabase)
+    init(store: VBPerfectStoreDatabase)
 }
 
-public extension VabeWorker
+public extension VBPerfectWorker
 {
     public func count(identifiers: [String]?) throws -> UInt64
     {
@@ -41,7 +41,7 @@ public extension VabeWorker
         }
     }
     
-    public func list(identifiers: [String]?, options: VabeStoreOptions) throws -> [Any]?
+    public func list(identifiers: [String]?, options: VBPerfectStoreOptions) throws -> [Any]?
     {
         do
         {
