@@ -7,14 +7,11 @@
 //
 
 /**
- Defines a `VabeStore` requirements. This protocol add to `VabeStore` protocol a class name.
+ Defines a `VabeStore` requirements.
  
  - authors: Valentin Bercot
  */
 public protocol VabeStoreDatabase: VabeStore
 {
-    /**
-     The ressource class name.
-     */
-    var className: String { get }
+    
 }
