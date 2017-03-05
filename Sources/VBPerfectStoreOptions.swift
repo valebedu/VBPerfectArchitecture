@@ -70,7 +70,7 @@ public struct VBPerfectStoreOptions
         {
             if let limit = UInt8(limitParam)
             {
-                if (limit <= 100)
+                if (limit >= 10 && limit <= 100)
                 {
                     self.limit = limit
                 }
