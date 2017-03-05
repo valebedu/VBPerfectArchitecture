@@ -29,7 +29,7 @@ public protocol VBPerfectWorker: VBPerfectStore
 
 public extension VBPerfectWorker
 {
-    public func count(identifiers: [String]?) throws -> UInt64
+    public func count(identifiers: [String: Any]?) throws -> UInt64
     {
         do
         {
@@ -41,7 +41,7 @@ public extension VBPerfectWorker
         }
     }
     
-    public func list(identifiers: [String]?, options: VBPerfectStoreOptions) throws -> [Any]?
+    public func list(identifiers: [String: Any]?, options: VBPerfectStoreOptions) throws -> [Any]?
     {
         do
         {
@@ -53,7 +53,7 @@ public extension VBPerfectWorker
         }
     }
     
-    public func retrieve(identifiers: [String]) throws -> Any?
+    public func retrieve(identifiers: [String: Any]) throws -> Any?
     {
         do
         {
@@ -65,7 +65,7 @@ public extension VBPerfectWorker
         }
     }
     
-    public func create(identifers: [String]?, ressource: Any) throws
+    public func create(identifers: [String: Any]?, ressource: Any) throws
     {
         do
         {
@@ -77,7 +77,7 @@ public extension VBPerfectWorker
         }
     }
     
-    public func update(identifiers: [String], ressource: Any) throws
+    public func update(identifiers: [String: Any], ressource: Any) throws
     {
         do
         {
@@ -89,7 +89,7 @@ public extension VBPerfectWorker
         }
     }
     
-    public func delete(identifiers: [String]) throws
+    public func delete(identifiers: [String: Any]) throws
     {
         do
         {
