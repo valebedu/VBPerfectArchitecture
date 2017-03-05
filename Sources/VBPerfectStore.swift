@@ -23,7 +23,7 @@ public protocol VBPerfectStore
      
      - returns: the total amount of ressources.
      */
-    func count(identifiers: [String]?) throws -> UInt64
+    func count(identifiers: [String: Any]?) throws -> UInt64
     
     /**
      List ressources based on options.
@@ -36,7 +36,7 @@ public protocol VBPerfectStore
      
      - returns: a list of ressources.
      */
-    func list(identifiers: [String]?, options: VBPerfectStoreOptions) throws -> [Any]?
+    func list(identifiers: [String: Any]?, options: VBPerfectStoreOptions) throws -> [Any]?
     
     /**
      Retrieve a specific ressource.
@@ -48,7 +48,7 @@ public protocol VBPerfectStore
      
      - returns: the ressource wanted.
      */
-    func retrieve(identifiers: [String]) throws -> Any?
+    func retrieve(identifiers: [String: Any]) throws -> Any?
     
     /**
      Create a new ressource.
@@ -61,7 +61,7 @@ public protocol VBPerfectStore
      
      - returns: the total amount of ressources.
      */
-    func create(identifers: [String]?, ressource: Any) throws -> Void
+    func create(identifers: [String: Any]?, ressource: Any) throws -> Void
     
     /**
      Update a specific ressource.
@@ -72,7 +72,7 @@ public protocol VBPerfectStore
      
      - throws: can throw error if it occurs on database or on querry.
      */
-    func update(identifiers: [String], ressource: Any) throws -> Void
+    func update(identifiers: [String: Any], ressource: Any) throws -> Void
     
     /**
      Delete a specific ressource.
@@ -82,5 +82,5 @@ public protocol VBPerfectStore
      
      - throws: can throw error if it occurs on database or on querry.
      */
-    func delete(identifiers: [String]) throws -> Void
+    func delete(identifiers: [String: Any]) throws -> Void
 }
