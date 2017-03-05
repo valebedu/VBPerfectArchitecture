@@ -65,11 +65,11 @@ public extension VBPerfectWorker
         }
     }
     
-    public func create(identifers: [String: Any]?, ressource: Any) throws
+    public func create(identifiers: [String: Any]?, ressource: Any) throws
     {
         do
         {
-            return try store.create(identifers: identifers, ressource: ressource)
+            return try store.create(identifiers: identifiers, ressource: ressource)
         }
         catch
         {

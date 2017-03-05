@@ -61,7 +61,7 @@ public protocol VBPerfectStore
      
      - returns: the total amount of ressources.
      */
-    func create(identifers: [String: Any]?, ressource: Any) throws -> Void
+    func create(identifiers: [String: Any]?, ressource: Any) throws -> Void
     
     /**
      Update a specific ressource.
