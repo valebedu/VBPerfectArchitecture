@@ -21,4 +21,5 @@ public enum VBPerfectStoreError: Error
     case limitReached(limit: UInt8)
     case notFound(identifier: String)
     case notSingle(identifier: String)
+    case ressourceNotExpected(ressource: Any, expected: Any)
 }
