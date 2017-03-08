@@ -17,9 +17,9 @@ public enum VBPerfectStoreError: Error
 {
     case alreadyExist(identifier: String)
     case badFormat(parameter: String)
-    case identifiersNotExpected(identifiers: [String: Any], expected: UInt8)
+    case identifiersNotExpected(identifiers: [String: Any]?, expected: UInt8)
     case limitReached(limit: UInt8)
     case notFound(identifier: String)
     case notSingle(identifier: String)
-    case ressourceNotExpected(ressource: Any, expected: Any)
+    case ressourceNotExpected(ressource: Any, expected: String)
 }
